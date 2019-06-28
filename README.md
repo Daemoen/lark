@@ -8,6 +8,6 @@ Make sure its public so we can pull it.
 
 
 ## To test
-When this container is ran successfully you should see the dpkg result for curl and the echo "This script is totally running!".
+When this container has run successfully you should see the dpkg result for curl and the echo "This script is totally running!".
 
 We will execute `docker run yourimagename/yourtag` first, and then inspect it.
