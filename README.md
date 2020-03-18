@@ -1,13 +1,20 @@
-# Fix Me Dockerstyle
-
-Using this repo build an image and push it to your public dockerhub so we can run it (make sure to send back your imagename/tag).
-
-There are many ways to make this work and we'd like to explore what you did.  So at a minimum please attempt to fix the existing Dockerfile and make sure to include the entire repo into the docker container (and explain why this isn't always a great idea) and submit the tag name back.
-
-Make sure its public so we can pull it.
-
+# Fixed Docker
+* Moved Dockerfile to 'project root'
+* Deleted needless nested directories
+* Changed Ubuntu/latest to Ubuntu:latest
+* Renamed script name to correct format in Dockerfile
+* Changed CMD to explicit path and bash invocation
 
 ## To test
-When this container has run successfully you should see the dpkg result for curl and the echo "This script is totally running!".
+`docker run daemoen/lark:latest`
 
-We will execute `docker run yourimagename/yourtag` first, and then inspect it.
+## Notes
+It is not normally advisable to copy entire code sets to a docker image.
+This is for numerous reasons, the below included (but not necessarily all):
+
+* Not needed, containers are runtimes, not repositories
+* Slows workflow
+  * Image sizes grow needlessly
+* Security concerns
+  * Password/Api Exposure
+  * Code leakage
